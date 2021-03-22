@@ -1,0 +1,12 @@
+title SPA new note
+browser->server: HTTP POST new_note_spa from spa.js
+note right of browser:
+Sending json-data to server
+end note
+
+server-->browser: Status 201
+note over browser:
+Now spa.js makes us render the notes again
+without making any new HTTP request
+end note
+
