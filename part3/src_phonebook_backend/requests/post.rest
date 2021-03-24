@@ -1,0 +1,22 @@
+POST  http://localhost:3001/api/persons
+content-type: application/json
+
+{
+        "name": "asdsad",
+        "number": "3314143"
+}
+
+###
+GET  http://localhost:3001/api/persons HTTP/1.1
+
+###
+DELETE http://localhost:3001/api/persons/605b44435391ca4a48f4da99
+
+###
+PUT http://localhost:3001/api/persons/605b44435391ca4a48f4da99
+content-type: application/json
+
+{
+        "name": "csas",
+        "number": "3314143"
+}
