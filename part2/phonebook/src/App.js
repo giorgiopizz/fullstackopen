@@ -56,6 +56,13 @@ const App = () => {
           });
           setTimeout(() => setNotification(null), 5000);
         })
+        .catch(error => {
+          setNotification({
+            message: error.response.data,
+            description: 'error'
+          });
+          setTimeout(() => setNotification(null), 5000);
+        })
 
     } else {
       if (window.confirm(`${newName} is already added to phonebook, replace the old number with a new one?`)) {
@@ -107,7 +114,7 @@ const App = () => {
 
 
 
-  
+
   return (
     <div>
       <h2>Phonebook</h2>
